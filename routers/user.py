@@ -2,12 +2,10 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from jwt_manager import create_token
 from fastapi.responses import JSONResponse
+from schemas.user import User
 
 user_router = APIRouter()
 
-class User(BaseModel):
-    email:str
-    password:str
 
 @user_router.post('/login', tags=['auth'])
 def login(user: User):
