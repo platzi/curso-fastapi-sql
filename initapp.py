@@ -31,9 +31,7 @@ def execute_commands(commands: List[str]) -> List[Tuple[bool, Union[str, str]]]:
 
 # Example of usage
 commands = [
-            "ls -la",
-            "echo 'Hello, World!'",
-            "date",
-            "git add ."
+            "git add .",
+            "git commit -m deco"
             ]
 results = execute_commands(commands)
